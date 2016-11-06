@@ -21,6 +21,7 @@ namespace VapeForLife.Services
         public HTML_Prebuilds.SmallHtmlPreBuild SignUp()
         {
             HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html", "reloadcontent/usermanagement/register.js");
+            outPut.AlloewdToReload = true;
             return outPut;
         }
 
