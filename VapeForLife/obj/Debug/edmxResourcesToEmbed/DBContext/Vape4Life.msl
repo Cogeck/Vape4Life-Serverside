@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vapeforlifeModelStoreContainer" CdmEntityContainer="VapeForLifeEntities">
+    <EntitySetMapping Name="aromas">
+      <EntityTypeMapping TypeName="vapeforlifeModel.aroma">
+        <MappingFragment StoreEntitySet="aroma">
+          <ScalarProperty Name="IdAroma" ColumnName="IdAroma" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aroma_languages_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.aroma_languages_relation">
+        <MappingFragment StoreEntitySet="aroma_languages_relation">
+          <ScalarProperty Name="idaroma_languages_relation" ColumnName="idaroma_languages_relation" />
+          <ScalarProperty Name="idfAroma" ColumnName="idfAroma" />
+          <ScalarProperty Name="idfLanguages" ColumnName="idfLanguages" />
+          <ScalarProperty Name="CaptionTranslation" ColumnName="CaptionTranslation" />
+          <ScalarProperty Name="DescriptionTranslation" ColumnName="DescriptionTranslation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bases">
+      <EntityTypeMapping TypeName="vapeforlifeModel.base">
+        <MappingFragment StoreEntitySet="base">
+          <ScalarProperty Name="IdBase" ColumnName="IdBase" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PG" ColumnName="PG" />
+          <ScalarProperty Name="VG" ColumnName="VG" />
+          <ScalarProperty Name="Water" ColumnName="Water" />
+          <ScalarProperty Name="Nicotin" ColumnName="Nicotin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="base_languages_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.base_languages_relation">
+        <MappingFragment StoreEntitySet="base_languages_relation">
+          <ScalarProperty Name="idbase_languages_relation" ColumnName="idbase_languages_relation" />
+          <ScalarProperty Name="idfBase" ColumnName="idfBase" />
+          <ScalarProperty Name="idfLanguages" ColumnName="idfLanguages" />
+          <ScalarProperty Name="CaptionTranslation" ColumnName="CaptionTranslation" />
+          <ScalarProperty Name="DescriptionTranslation" ColumnName="DescriptionTranslation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="languages">
+      <EntityTypeMapping TypeName="vapeforlifeModel.language">
+        <MappingFragment StoreEntitySet="languages">
+          <ScalarProperty Name="IdLanguages" ColumnName="IdLanguages" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manufacturers">
+      <EntityTypeMapping TypeName="vapeforlifeModel.manufacturer">
+        <MappingFragment StoreEntitySet="manufacturer">
+          <ScalarProperty Name="IdManufacturer" ColumnName="IdManufacturer" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ShopSite" ColumnName="ShopSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manufacturer_aroma_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.manufacturer_aroma_relation">
+        <MappingFragment StoreEntitySet="manufacturer_aroma_relation">
+          <ScalarProperty Name="IdManufacturer_Aroma_Relation" ColumnName="IdManufacturer_Aroma_Relation" />
+          <ScalarProperty Name="IdfManufacturer" ColumnName="IdfManufacturer" />
+          <ScalarProperty Name="IdfAroma" ColumnName="IdfAroma" />
+          <ScalarProperty Name="ArticleSiteUrl" ColumnName="ArticleSiteUrl" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdfUnits" ColumnName="IdfUnits" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manufacturer_base_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.manufacturer_base_relation">
+        <MappingFragment StoreEntitySet="manufacturer_base_relation">
+          <ScalarProperty Name="IdManufacturer_Base_Relation" ColumnName="IdManufacturer_Base_Relation" />
+          <ScalarProperty Name="IdfManufacturer" ColumnName="IdfManufacturer" />
+          <ScalarProperty Name="IdfBase" ColumnName="IdfBase" />
+          <ScalarProperty Name="ArticleSiteUrl" ColumnName="ArticleSiteUrl" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdfUnits" ColumnName="IdfUnits" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manufacturer_languages_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.manufacturer_languages_relation">
+        <MappingFragment StoreEntitySet="manufacturer_languages_relation">
+          <ScalarProperty Name="idmanufacturer_languages_relation" ColumnName="idmanufacturer_languages_relation" />
+          <ScalarProperty Name="idfManufacturer" ColumnName="idfManufacturer" />
+          <ScalarProperty Name="idfLanguages" ColumnName="idfLanguages" />
+          <ScalarProperty Name="CaptionTranslation" ColumnName="CaptionTranslation" />
+          <ScalarProperty Name="DescriptionTranslation" ColumnName="DescriptionTranslation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manufacturer_nicotine_relation">
+      <EntityTypeMapping TypeName="vapeforlifeModel.manufacturer_nicotine_relation">
+        <MappingFragment StoreEntitySet="manufacturer_nicotine_relation">
+          <ScalarProperty Name="IdManufacturer_Nicotine_Relation" ColumnName="IdManufacturer_Nicotine_Relation" />
+          <ScalarProperty Name="IdfManufacturer" ColumnName="IdfManufacturer" />
+          <ScalarProperty Name="IdfNicotine" ColumnName="IdfNicotine" />
+          <ScalarProperty Name="ArticleSiteUrl" ColumnName="ArticleSiteUrl" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdfUnits" ColumnName="IdfUnits" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nicotines">
+      <EntityTypeMapping TypeName="vapeforlifeModel.nicotine">
+        <MappingFragment StoreEntitySet="nicotine">
+          <ScalarProperty Name="IdNicotine" ColumnName="IdNicotine" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="units">
+      <EntityTypeMapping TypeName="vapeforlifeModel.unit">
+        <MappingFragment StoreEntitySet="units">
+          <ScalarProperty Name="IdUnits" ColumnName="IdUnits" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="vapeforlifeModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
