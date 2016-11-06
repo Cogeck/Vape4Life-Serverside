@@ -122,10 +122,10 @@
     <Key>
       <PropertyRef Name="IdUser" />
     </Key>
-    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Email" Type="text" Nullable="false" />
     <Property Name="Nickname" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="64" Nullable="false" />
     <Property Name="Name" Type="text" />
     <Property Name="Lastname" Type="text" />
   </EntityType>

@@ -118,17 +118,6 @@
     <Property Name="IdUnits" Type="Int32" Nullable="false" />
     <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="user">
-    <Key>
-      <PropertyRef Name="IdUser" />
-    </Key>
-    <Property Name="IdUser" Type="Int32" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nickname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
-    <Property Name="Lastname" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityContainer Name="Vape4LifeEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="aroma" EntityType="Self.aroma" />
     <EntitySet Name="aroma_languages_relation" EntityType="Self.aroma_languages_relation" />
@@ -142,6 +131,17 @@
     <EntitySet Name="manufacturer_nicotine_relation" EntityType="Self.manufacturer_nicotine_relation" />
     <EntitySet Name="nicotine" EntityType="Self.nicotine" />
     <EntitySet Name="units" EntityType="Self.units" />
-    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="users" EntityType="Vape4Life.user" />
   </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Nickname" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Lastname" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

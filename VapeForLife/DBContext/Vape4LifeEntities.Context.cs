@@ -37,6 +37,6 @@ namespace VapeForLife.DBContext
         public virtual DbSet<manufacturer_nicotine_relation> manufacturer_nicotine_relation { get; set; }
         public virtual DbSet<nicotine> nicotine { get; set; }
         public virtual DbSet<units> units { get; set; }
-        public virtual DbSet<user> user { get; set; }
+        public virtual DbSet<user> users { get; set; }
     }
 }

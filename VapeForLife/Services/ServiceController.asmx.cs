@@ -46,11 +46,11 @@ namespace VapeForLife.Services
 
                 using (var entities = new Vape4LifeEntities())
                 {
-                    if (entities.user.Any())
+                    if (entities.users.Any())
                     {
                         var hash = sha256_hash(userObject.Password);
-                        
-                        if (entities.user.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
+
+                        if (entities.users.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
                         {
                             outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html");
                         }
@@ -68,7 +68,7 @@ namespace VapeForLife.Services
                         u.Nickname = "admin";
                         u.Password = sha256_hash("admin");
                         u.Email = "admin@admin.admin";
-                        entities.user.Add(u);
+                        entities.users.Add(u);
                         entities.SaveChanges();
                         outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
                         outPut.HTML = "NOPE";
@@ -99,10 +99,30 @@ namespace VapeForLife.Services
         {
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(nickname);
+            HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
 
+            //user u = new user();
+            //u.Email = userObject.Email;
+            //u.Lastname = userObject.LastName ?? string.Empty;
+            //u.Name = userObject.Name ?? string.Empty;
+            //u.Nickname = userObject.NickName ?? string.Empty;
+            //u.Password = sha256_hash(userObject.Password);
+            using (var entities = new Vape4LifeEntities())
+            {
+                var u = entities.users.Create<user>();
+                u.Email = userObject.Email;
+                u.Lastname = userObject.LastName ?? string.Empty;
+                u.Name = userObject.Name ?? string.Empty;
+                u.Nickname = userObject.NickName ?? string.Empty;
+                u.Password = sha256_hash(userObject.Password);
 
+                entities.users.Add(u);
+                entities.SaveChanges();
+                outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
+                outPut.HTML ="reloadcontent/usermanagement/signup.html";
+            }
 
-            HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html");
+            //HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html");
 
             return outPut;
         }
