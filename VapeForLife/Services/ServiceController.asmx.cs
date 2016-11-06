@@ -100,13 +100,8 @@ namespace VapeForLife.Services
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(nickname);
             HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
-
-            //user u = new user();
-            //u.Email = userObject.Email;
-            //u.Lastname = userObject.LastName ?? string.Empty;
-            //u.Name = userObject.Name ?? string.Empty;
-            //u.Nickname = userObject.NickName ?? string.Empty;
-            //u.Password = sha256_hash(userObject.Password);
+            
+            //TODO: Prüfen ob der Benutzer valide Werte eingegeben hat. Dies kann auf mehreren Seiten geschehen.
             using (var entities = new Vape4LifeEntities())
             {
                 var u = entities.users.Create<user>();
@@ -121,8 +116,6 @@ namespace VapeForLife.Services
                 outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
                 outPut.HTML ="reloadcontent/usermanagement/signup.html";
             }
-
-            //HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html");
 
             return outPut;
         }
