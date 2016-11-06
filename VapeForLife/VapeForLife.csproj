@@ -214,6 +214,7 @@
       <DependentUpon>ServiceController.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Services\UserManagement\UserManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
