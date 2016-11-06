@@ -52,12 +52,17 @@ namespace VapeForLife.Services
 
                         if (entities.users.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
                         {
-                            outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html");
+                            outPut = 
+                                new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html",
+                                "reloadcontent/afterlogin/ReloadedAfterLogin.js", 
+                                "reloadcontent/afterlogin/ReloadedAfterLogin.css");
+
+                            outPut.AlloewdToReload = true;
                         }
                         else
                         {
                             outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
-                            outPut.HTML = "NOPE";
+                            outPut.AlloewdToReload = false;
                         }
                     }
                     else
@@ -71,15 +76,14 @@ namespace VapeForLife.Services
                         entities.users.Add(u);
                         entities.SaveChanges();
                         outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
-                        outPut.HTML = "NOPE";
+                        outPut.AlloewdToReload = false;
                     }
                 }
             }
             else
             {
-                outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
-                outPut.HTML = "NOPE";
-
+                outPut = new HTML_Prebuilds.SmallHtmlPreBuild();                
+                outPut.AlloewdToReload = false;
             }
             return outPut;
         }
@@ -114,7 +118,7 @@ namespace VapeForLife.Services
                 entities.users.Add(u);
                 entities.SaveChanges();
                 outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
-                outPut.HTML ="reloadcontent/usermanagement/signup.html";
+                outPut.HTML.Add("reloadcontent/usermanagement/signup.html");
             }
 
             return outPut;
