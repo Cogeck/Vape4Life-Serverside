@@ -36,7 +36,6 @@ namespace VapeForLife.Services
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public HTML_Prebuilds.SmallHtmlPreBuild CheckIfUserAlloewdAccess(string user)
         {
-
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(user);
 
@@ -45,13 +44,13 @@ namespace VapeForLife.Services
             if (!string.IsNullOrEmpty(userObject.Password))
             {
 
-                using (var entities = new VapeForLifeEntities())
+                using (var entities = new Vape4LifeEntities())
                 {
-                    if (entities.users.Any())
+                    if (entities.user.Any())
                     {
                         var hash = sha256_hash(userObject.Password);
                         
-                        if (entities.users.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
+                        if (entities.user.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
                         {
                             outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html");
                         }
@@ -69,7 +68,7 @@ namespace VapeForLife.Services
                         u.Nickname = "admin";
                         u.Password = sha256_hash("admin");
                         u.Email = "admin@admin.admin";
-                        entities.users.Add(u);
+                        entities.user.Add(u);
                         entities.SaveChanges();
                         outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
                         outPut.HTML = "NOPE";
@@ -97,7 +96,12 @@ namespace VapeForLife.Services
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public HTML_Prebuilds.SmallHtmlPreBuild Register(string nickname)
-        { 
+        {
+            var serializer = new JavaScriptSerializer(); //stop point set here
+            DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(nickname);
+
+
+
             HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html");
 
             return outPut;

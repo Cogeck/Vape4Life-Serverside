@@ -48,11 +48,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -116,15 +116,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBContext\Vape4Life.Context.tt">
+    <Content Include="DBContext\Vape4LifeEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Vape4Life.edmx</DependentUpon>
-      <LastGenOutput>Vape4Life.Context.cs</LastGenOutput>
+      <DependentUpon>Vape4LifeEntities.edmx</DependentUpon>
+      <LastGenOutput>Vape4LifeEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DBContext\Vape4Life.tt">
+    <Content Include="DBContext\Vape4LifeEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Vape4Life.edmx</DependentUpon>
-      <LastGenOutput>Vape4Life.cs</LastGenOutput>
+      <DependentUpon>Vape4LifeEntities.edmx</DependentUpon>
+      <LastGenOutput>Vape4LifeEntities.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -132,12 +132,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="DBContext\Vape4Life.edmx">
+    <EntityDeploy Include="DBContext\Vape4LifeEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Vape4Life.Designer.cs</LastGenOutput>
+      <LastGenOutput>Vape4LifeEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DBContext\Vape4Life.edmx.diagram">
-      <DependentUpon>Vape4Life.edmx</DependentUpon>
+    <Content Include="DBContext\Vape4LifeEntities.edmx.diagram">
+      <DependentUpon>Vape4LifeEntities.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -155,58 +155,58 @@
   <ItemGroup>
     <Compile Include="DataClasses\User.cs" />
     <Compile Include="DBContext\aroma.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\aroma_languages_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\base.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\base_languages_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\language.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+    <Compile Include="DBContext\languages.cs">
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\manufacturer.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\manufacturer_aroma_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\manufacturer_base_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\manufacturer_languages_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\manufacturer_nicotine_relation.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\nicotine.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\unit.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+    <Compile Include="DBContext\units.cs">
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DBContext\user.cs">
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\Vape4Life.Context.cs">
+    <Compile Include="DBContext\Vape4LifeEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vape4Life.Context.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\Vape4Life.cs">
+    <Compile Include="DBContext\Vape4LifeEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vape4Life.tt</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBContext\Vape4Life.Designer.cs">
+    <Compile Include="DBContext\Vape4LifeEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vape4Life.edmx</DependentUpon>
+      <DependentUpon>Vape4LifeEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="HTML_Prebuilds\SmallHtmlPreBuild.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

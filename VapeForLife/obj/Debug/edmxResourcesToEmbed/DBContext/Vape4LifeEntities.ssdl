@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vape4Life.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="aroma">
+    <Key>
+      <PropertyRef Name="IdAroma" />
+    </Key>
+    <Property Name="IdAroma" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityType Name="aroma_languages_relation">
+    <Key>
+      <PropertyRef Name="idaroma_languages_relation" />
+    </Key>
+    <Property Name="idaroma_languages_relation" Type="int" Nullable="false" />
+    <Property Name="idfAroma" Type="int" Nullable="false" />
+    <Property Name="idfLanguages" Type="int" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="text" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="base">
+    <Key>
+      <PropertyRef Name="IdBase" />
+    </Key>
+    <Property Name="IdBase" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="PG" Type="int" Nullable="false" />
+    <Property Name="VG" Type="int" Nullable="false" />
+    <Property Name="Water" Type="int" Nullable="false" />
+    <Property Name="Nicotin" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="base_languages_relation">
+    <Key>
+      <PropertyRef Name="idbase_languages_relation" />
+    </Key>
+    <Property Name="idbase_languages_relation" Type="int" Nullable="false" />
+    <Property Name="idfBase" Type="int" Nullable="false" />
+    <Property Name="idfLanguages" Type="int" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="text" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="languages">
+    <Key>
+      <PropertyRef Name="IdLanguages" />
+    </Key>
+    <Property Name="IdLanguages" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="manufacturer">
+    <Key>
+      <PropertyRef Name="IdManufacturer" />
+    </Key>
+    <Property Name="IdManufacturer" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="ShopSite" Type="text" />
+  </EntityType>
+  <EntityType Name="manufacturer_aroma_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Aroma_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Aroma_Relation" Type="int" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="int" Nullable="false" />
+    <Property Name="IdfAroma" Type="int" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="text" />
+    <Property Name="Amount" Type="text" />
+    <Property Name="IdfUnits" Type="text" />
+    <Property Name="Price" Type="text" />
+  </EntityType>
+  <EntityType Name="manufacturer_base_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Base_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Base_Relation" Type="int" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="int" Nullable="false" />
+    <Property Name="IdfBase" Type="int" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="text" />
+    <Property Name="Amount" Type="text" />
+    <Property Name="IdfUnits" Type="text" />
+    <Property Name="Price" Type="text" />
+  </EntityType>
+  <EntityType Name="manufacturer_languages_relation">
+    <Key>
+      <PropertyRef Name="idmanufacturer_languages_relation" />
+    </Key>
+    <Property Name="idmanufacturer_languages_relation" Type="int" Nullable="false" />
+    <Property Name="idfManufacturer" Type="int" Nullable="false" />
+    <Property Name="idfLanguages" Type="int" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="text" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="manufacturer_nicotine_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Nicotine_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Nicotine_Relation" Type="int" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="int" Nullable="false" />
+    <Property Name="IdfNicotine" Type="int" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="text" />
+    <Property Name="Amount" Type="text" />
+    <Property Name="IdfUnits" Type="text" />
+    <Property Name="Price" Type="text" />
+  </EntityType>
+  <EntityType Name="nicotine">
+    <Key>
+      <PropertyRef Name="IdNicotine" />
+    </Key>
+    <Property Name="IdNicotine" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityType Name="units">
+    <Key>
+      <PropertyRef Name="IdUnits" />
+    </Key>
+    <Property Name="IdUnits" Type="int" Nullable="false" />
+    <Property Name="Caption" Type="text" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="Email" Type="text" Nullable="false" />
+    <Property Name="Nickname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Name" Type="text" />
+    <Property Name="Lastname" Type="text" />
+  </EntityType>
+  <EntityContainer Name="Vape4LifeStoreContainer">
+    <EntitySet Name="aroma" EntityType="Self.aroma" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="aroma_languages_relation" EntityType="Self.aroma_languages_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="base" EntityType="Self.base" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="base_languages_relation" EntityType="Self.base_languages_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="languages" EntityType="Self.languages" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="manufacturer" EntityType="Self.manufacturer" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="manufacturer_aroma_relation" EntityType="Self.manufacturer_aroma_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="manufacturer_base_relation" EntityType="Self.manufacturer_base_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="manufacturer_languages_relation" EntityType="Self.manufacturer_languages_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="manufacturer_nicotine_relation" EntityType="Self.manufacturer_nicotine_relation" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="nicotine" EntityType="Self.nicotine" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="units" EntityType="Self.units" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="d023dd34" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

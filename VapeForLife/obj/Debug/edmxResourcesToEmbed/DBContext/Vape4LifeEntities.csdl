@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vape4Life" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="aroma">
+    <Key>
+      <PropertyRef Name="IdAroma" />
+    </Key>
+    <Property Name="IdAroma" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="aroma_languages_relation">
+    <Key>
+      <PropertyRef Name="idaroma_languages_relation" />
+    </Key>
+    <Property Name="idaroma_languages_relation" Type="Int32" Nullable="false" />
+    <Property Name="idfAroma" Type="Int32" Nullable="false" />
+    <Property Name="idfLanguages" Type="Int32" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="base">
+    <Key>
+      <PropertyRef Name="IdBase" />
+    </Key>
+    <Property Name="IdBase" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="PG" Type="Int32" Nullable="false" />
+    <Property Name="VG" Type="Int32" Nullable="false" />
+    <Property Name="Water" Type="Int32" Nullable="false" />
+    <Property Name="Nicotin" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="base_languages_relation">
+    <Key>
+      <PropertyRef Name="idbase_languages_relation" />
+    </Key>
+    <Property Name="idbase_languages_relation" Type="Int32" Nullable="false" />
+    <Property Name="idfBase" Type="Int32" Nullable="false" />
+    <Property Name="idfLanguages" Type="Int32" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="languages">
+    <Key>
+      <PropertyRef Name="IdLanguages" />
+    </Key>
+    <Property Name="IdLanguages" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manufacturer">
+    <Key>
+      <PropertyRef Name="IdManufacturer" />
+    </Key>
+    <Property Name="IdManufacturer" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="ShopSite" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manufacturer_aroma_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Aroma_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Aroma_Relation" Type="Int32" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="Int32" Nullable="false" />
+    <Property Name="IdfAroma" Type="Int32" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IdfUnits" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manufacturer_base_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Base_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Base_Relation" Type="Int32" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="Int32" Nullable="false" />
+    <Property Name="IdfBase" Type="Int32" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IdfUnits" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="manufacturer_languages_relation">
+    <Key>
+      <PropertyRef Name="idmanufacturer_languages_relation" />
+    </Key>
+    <Property Name="idmanufacturer_languages_relation" Type="Int32" Nullable="false" />
+    <Property Name="idfManufacturer" Type="Int32" Nullable="false" />
+    <Property Name="idfLanguages" Type="Int32" Nullable="false" />
+    <Property Name="CaptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DescriptionTranslation" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="manufacturer_nicotine_relation">
+    <Key>
+      <PropertyRef Name="IdManufacturer_Nicotine_Relation" />
+    </Key>
+    <Property Name="IdManufacturer_Nicotine_Relation" Type="Int32" Nullable="false" />
+    <Property Name="IdfManufacturer" Type="Int32" Nullable="false" />
+    <Property Name="IdfNicotine" Type="Int32" Nullable="false" />
+    <Property Name="ArticleSiteUrl" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IdfUnits" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="nicotine">
+    <Key>
+      <PropertyRef Name="IdNicotine" />
+    </Key>
+    <Property Name="IdNicotine" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="units">
+    <Key>
+      <PropertyRef Name="IdUnits" />
+    </Key>
+    <Property Name="IdUnits" Type="Int32" Nullable="false" />
+    <Property Name="Caption" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nickname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="Lastname" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Vape4LifeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aroma" EntityType="Self.aroma" />
+    <EntitySet Name="aroma_languages_relation" EntityType="Self.aroma_languages_relation" />
+    <EntitySet Name="base" EntityType="Self.base" />
+    <EntitySet Name="base_languages_relation" EntityType="Self.base_languages_relation" />
+    <EntitySet Name="languages" EntityType="Self.languages" />
+    <EntitySet Name="manufacturer" EntityType="Self.manufacturer" />
+    <EntitySet Name="manufacturer_aroma_relation" EntityType="Self.manufacturer_aroma_relation" />
+    <EntitySet Name="manufacturer_base_relation" EntityType="Self.manufacturer_base_relation" />
+    <EntitySet Name="manufacturer_languages_relation" EntityType="Self.manufacturer_languages_relation" />
+    <EntitySet Name="manufacturer_nicotine_relation" EntityType="Self.manufacturer_nicotine_relation" />
+    <EntitySet Name="nicotine" EntityType="Self.nicotine" />
+    <EntitySet Name="units" EntityType="Self.units" />
+    <EntitySet Name="user" EntityType="Self.user" />
+  </EntityContainer>
+</Schema>
