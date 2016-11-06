@@ -1,4 +1,3 @@
-C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.csprojResolveAssemblyReference.cache
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.dll
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.pdb
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\ApplicationInsights.config
@@ -27,8 +26,6 @@ C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.AI
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.ApplicationInsights.dll
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.dll
-C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.Entity.EF6.dll
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.xml
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.SqlServer.xml
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.AI.DependencyCollector.xml
@@ -79,3 +76,6 @@ C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\de\En
 C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\de\EntityFramework.SqlServer.resources.dll
 C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.dll
 C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.pdb
+C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.dll
+C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.Entity.EF6.dll
+C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\obj\Debug\VapeForLife.csprojResolveAssemblyReference.cache
