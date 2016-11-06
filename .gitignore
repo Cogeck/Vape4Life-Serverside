@@ -53,3 +53,9 @@ VapeForLife/bin/VapeForLife.dll
 *.pdb
 VapeForLife/obj/Debug/VapeForLife.pdb
 *.suo
+*.suo
+VapeForLife/obj/Debug/VapeForLife.csprojResolveAssemblyReference.cache
+VapeForLife/obj/Debug/VapeForLife.dll
+VapeForLife/obj/Debug/VapeForLife.dll
+*.suo
+VapeForLife/bin/VapeForLife.dll
