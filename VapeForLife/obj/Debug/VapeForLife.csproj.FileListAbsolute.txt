@@ -72,3 +72,11 @@ C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.Ap
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\de\EntityFramework.resources.dll
 C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\bin\de\EntityFramework.SqlServer.resources.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.SqlServer.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.xml
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\EntityFramework.SqlServer.xml
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\de\EntityFramework.resources.dll
+C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\bin\de\EntityFramework.SqlServer.resources.dll

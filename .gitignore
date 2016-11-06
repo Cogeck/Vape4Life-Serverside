@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.vs/Vape4Life/v14/.suo
+*.suo
+VapeForLife/bin/VapeForLife.dll
+*.pdb
+.vs/Vape4Life/v14/.suo
+*.pdb
+VapeForLife/obj/Debug/VapeForLife.pdb
+*.suo

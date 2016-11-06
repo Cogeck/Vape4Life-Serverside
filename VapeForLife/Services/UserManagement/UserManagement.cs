@@ -59,12 +59,17 @@ namespace VapeForLife.Services.UserManagement
 
                         if (entities.users.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
                         {
-                            outPut = new SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html");
+                            outPut =
+                              new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html",
+                              "reloadcontent/afterlogin/ReloadedAfterLogin.js",
+                              "reloadcontent/afterlogin/ReloadedAfterLogin.css");
+
+                            outPut.AlloewdToReload = true;
                         }
                         else
                         {
-                            outPut = new SmallHtmlPreBuild();
-                            outPut.HTML = "NOPE";
+                            outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
+                            outPut.AlloewdToReload = false;
                         }
                     }
                     /*
@@ -89,9 +94,9 @@ namespace VapeForLife.Services.UserManagement
             else
             {
                 outPut = new SmallHtmlPreBuild();
-                outPut.HTML = "NOPE";
-
+                outPut.AlloewdToReload = false;
             }
+
             return outPut;
         }
 
@@ -139,8 +144,8 @@ namespace VapeForLife.Services.UserManagement
                     entities.users.Add(u);
                     entities.SaveChanges();
                     outPut = new SmallHtmlPreBuild();
-                    outPut.HTML = "reloadcontent/usermanagement/loginafterregistration.html";
-                    outPut.JS = "js/usermanagement/loginafterregistration.js";
+                    outPut.HTML.Add("reloadcontent/usermanagement/loginafterregistration.html");
+                    outPut.JS.Add("js/usermanagement/loginafterregistration.js");
                     SendMail(userObject);
                 }
             }

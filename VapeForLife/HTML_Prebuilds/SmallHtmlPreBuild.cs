@@ -13,21 +13,28 @@ namespace VapeForLife.HTML_Prebuilds
         /// <summary>
         /// HTML-Content der nachgeladen werden soll
         /// </summary>
-        public string HTML { get; set; }
+        public List<string> HTML { get; set; } = new List<string>();
 
         /// <summary>
         /// JS das nachgeladen werden soll
         /// </summary>
-        public string JS { get; set; }
+        public List<string> JS { get; set; } = new List<string>();
 
+        // <summary>
+        /// CSS das nachgeladen werden soll
+        /// </summary>
+        public List<string> CSS { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Steuert ob der Nutzer die Anfrage erhalten darf
+        /// </summary>
+        public bool AlloewdToReload { get; set; }
 
         /// <summary>
         /// Konstruktor, setzt den HTML und JS auf string.Empty
         /// </summary>
         public SmallHtmlPreBuild()
         {
-            this.HTML = string.Empty;
-            this.JS = string.Empty;
         }
 
         /// <summary>
@@ -36,7 +43,7 @@ namespace VapeForLife.HTML_Prebuilds
         /// <param name="html">Der HTML der nachgeladen werden soll</param>
         public SmallHtmlPreBuild(string html)
         {
-            this.HTML = html;
+            this.HTML.Add(html);
         }
 
         /// <summary>
@@ -46,8 +53,20 @@ namespace VapeForLife.HTML_Prebuilds
         /// <param name="JS">Das JS das nachgeladen werden soll</param>
         public SmallHtmlPreBuild(string html, string JS)
         {
-            this.HTML = html;
-            this.JS = JS;
+            this.HTML.Add(html);
+            this.JS.Add(JS);
+        }
+
+        /// <summary>
+        /// Konstruktor mit Übergabeparameter HTML JS und CSS der nachgeladen werden soll
+        /// </summary>
+        /// <param name="html">Der HTML der nachgeladen werden soll</param>
+        /// <param name="JS">Das JS das nachgeladen werden soll</param>
+        public SmallHtmlPreBuild(string html, string JS, string css)
+        {
+            this.HTML.Add(html);
+            this.JS.Add(JS);
+            this.CSS.Add(css);
         }
     }
 }
