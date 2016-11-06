@@ -12,14 +12,9 @@ namespace VapeForLife.DBContext
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class ServerScriptMethod
     {
-        public int IdUser { get; set; }
-        public string Email { get; set; }
-        public string Nickname { get; set; }
-        public string Password { get; set; }
+        public int IdServerScriptMethod { get; set; }
         public string Name { get; set; }
-        public string Lastname { get; set; }
-        public Nullable<int> IdfUserLevel { get; set; }
     }
 }

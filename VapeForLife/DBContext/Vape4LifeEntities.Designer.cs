@@ -1,4 +1,4 @@
-﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\live\Documents\GitHub\Vape4Life-Serverside\VapeForLife\DBContext\Vape4LifeEntities.edmx' aktiviert. 
+﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\Shadow\Desktop\Jan\Vape4Life\Vape4Life-Serverside\VapeForLife\DBContext\Vape4LifeEntities.edmx' aktiviert. 
 // Um die Generierung von Legacycode zu aktivieren, ändern Sie den Wert der Designer-Eigenschaft 'Code Generation Strategy'
 // in 'Legacy ObjectContext'. Diese Eigenschaft wird im Eigenschaftenfenster angezeigt, wenn das Modell
 // im Designer geöffnet ist.

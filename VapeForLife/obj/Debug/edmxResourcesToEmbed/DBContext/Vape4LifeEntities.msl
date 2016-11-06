@@ -134,12 +134,48 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="Vape4Life.user">
         <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="IdfUserLevel" ColumnName="IdfUserLevel" />
           <ScalarProperty Name="Lastname" ColumnName="Lastname" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Nickname" ColumnName="Nickname" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReloadebleContentCSSes">
+      <EntityTypeMapping TypeName="Vape4Life.ReloadebleContentCSS">
+        <MappingFragment StoreEntitySet="ReloadebleContentCSS">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="IdfServerScriptMethod" ColumnName="IdfServerScriptMethod" />
+          <ScalarProperty Name="IdReloadebleContentCSS" ColumnName="IdReloadebleContentCSS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReloadebleContentHTMLs">
+      <EntityTypeMapping TypeName="Vape4Life.ReloadebleContentHTML">
+        <MappingFragment StoreEntitySet="ReloadebleContentHTML">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="IdfServerScriptMethod" ColumnName="IdfServerScriptMethod" />
+          <ScalarProperty Name="IdReloadebleContentHTML" ColumnName="IdReloadebleContentHTML" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReloadebleContentJS">
+      <EntityTypeMapping TypeName="Vape4Life.ReloadebleContentJ">
+        <MappingFragment StoreEntitySet="ReloadebleContentJS">
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="IdfServerScriptMethod" ColumnName="IdfServerScriptMethod" />
+          <ScalarProperty Name="IdReloadebleContentJS" ColumnName="IdReloadebleContentJS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerScriptMethods">
+      <EntityTypeMapping TypeName="Vape4Life.ServerScriptMethod">
+        <MappingFragment StoreEntitySet="ServerScriptMethod">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdServerScriptMethod" ColumnName="IdServerScriptMethod" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -12,14 +12,10 @@ namespace VapeForLife.DBContext
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class ReloadebleContentJ
     {
-        public int IdUser { get; set; }
-        public string Email { get; set; }
-        public string Nickname { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-        public Nullable<int> IdfUserLevel { get; set; }
+        public int IdReloadebleContentJS { get; set; }
+        public int IdfServerScriptMethod { get; set; }
+        public string FilePath { get; set; }
     }
 }

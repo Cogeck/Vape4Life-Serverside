@@ -38,5 +38,9 @@ namespace VapeForLife.DBContext
         public virtual DbSet<nicotine> nicotine { get; set; }
         public virtual DbSet<units> units { get; set; }
         public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<ReloadebleContentCSS> ReloadebleContentCSSes { get; set; }
+        public virtual DbSet<ReloadebleContentHTML> ReloadebleContentHTMLs { get; set; }
+        public virtual DbSet<ReloadebleContentJ> ReloadebleContentJS { get; set; }
+        public virtual DbSet<ServerScriptMethod> ServerScriptMethods { get; set; }
     }
 }

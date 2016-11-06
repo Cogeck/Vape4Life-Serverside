@@ -132,6 +132,10 @@
     <EntitySet Name="nicotine" EntityType="Self.nicotine" />
     <EntitySet Name="units" EntityType="Self.units" />
     <EntitySet Name="users" EntityType="Vape4Life.user" />
+    <EntitySet Name="ReloadebleContentCSSes" EntityType="Vape4Life.ReloadebleContentCSS" />
+    <EntitySet Name="ReloadebleContentHTMLs" EntityType="Vape4Life.ReloadebleContentHTML" />
+    <EntitySet Name="ReloadebleContentJS" EntityType="Vape4Life.ReloadebleContentJ" />
+    <EntitySet Name="ServerScriptMethods" EntityType="Vape4Life.ServerScriptMethod" />
   </EntityContainer>
   <EntityType Name="user">
     <Key>
@@ -143,5 +147,37 @@
     <Property Name="Password" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
     <Property Name="Name" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
     <Property Name="Lastname" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="IdfUserLevel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ReloadebleContentCSS">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentCSS" />
+    </Key>
+    <Property Name="IdReloadebleContentCSS" Type="Int32" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="Int32" Nullable="false" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReloadebleContentHTML">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentHTML" />
+    </Key>
+    <Property Name="IdReloadebleContentHTML" Type="Int32" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="Int32" Nullable="false" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ReloadebleContentJ">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentJS" />
+    </Key>
+    <Property Name="IdReloadebleContentJS" Type="Int32" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="Int32" Nullable="false" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ServerScriptMethod">
+    <Key>
+      <PropertyRef Name="IdServerScriptMethod" />
+    </Key>
+    <Property Name="IdServerScriptMethod" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

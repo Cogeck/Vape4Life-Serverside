@@ -111,6 +111,37 @@
     <Property Name="Caption" Type="text" />
     <Property Name="Description" Type="text" />
   </EntityType>
+  <EntityType Name="ReloadebleContentCSS">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentCSS" />
+    </Key>
+    <Property Name="IdReloadebleContentCSS" Type="int" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="int" Nullable="false" />
+    <Property Name="FilePath" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReloadebleContentHTML">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentHTML" />
+    </Key>
+    <Property Name="IdReloadebleContentHTML" Type="int" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="int" Nullable="false" />
+    <Property Name="FilePath" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReloadebleContentJS">
+    <Key>
+      <PropertyRef Name="IdReloadebleContentJS" />
+    </Key>
+    <Property Name="IdReloadebleContentJS" Type="int" Nullable="false" />
+    <Property Name="IdfServerScriptMethod" Type="int" Nullable="false" />
+    <Property Name="FilePath" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServerScriptMethod">
+    <Key>
+      <PropertyRef Name="IdServerScriptMethod" />
+    </Key>
+    <Property Name="IdServerScriptMethod" Type="int" Nullable="false" />
+    <Property Name="Name" Type="text" Nullable="false" />
+  </EntityType>
   <EntityType Name="units">
     <Key>
       <PropertyRef Name="IdUnits" />
@@ -128,6 +159,7 @@
     <Property Name="Password" Type="varchar" MaxLength="64" Nullable="false" />
     <Property Name="Name" Type="text" />
     <Property Name="Lastname" Type="text" />
+    <Property Name="IdfUserLevel" Type="int" />
   </EntityType>
   <EntityContainer Name="Vape4LifeStoreContainer">
     <EntitySet Name="aroma" EntityType="Self.aroma" Schema="d023dd34" store:Type="Tables" />
@@ -141,6 +173,10 @@
     <EntitySet Name="manufacturer_languages_relation" EntityType="Self.manufacturer_languages_relation" Schema="d023dd34" store:Type="Tables" />
     <EntitySet Name="manufacturer_nicotine_relation" EntityType="Self.manufacturer_nicotine_relation" Schema="d023dd34" store:Type="Tables" />
     <EntitySet Name="nicotine" EntityType="Self.nicotine" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="ReloadebleContentCSS" EntityType="Self.ReloadebleContentCSS" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="ReloadebleContentHTML" EntityType="Self.ReloadebleContentHTML" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="ReloadebleContentJS" EntityType="Self.ReloadebleContentJS" Schema="d023dd34" store:Type="Tables" />
+    <EntitySet Name="ServerScriptMethod" EntityType="Self.ServerScriptMethod" Schema="d023dd34" store:Type="Tables" />
     <EntitySet Name="units" EntityType="Self.units" Schema="d023dd34" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="d023dd34" store:Type="Tables" />
   </EntityContainer>

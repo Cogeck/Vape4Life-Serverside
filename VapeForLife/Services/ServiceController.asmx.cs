@@ -11,29 +11,29 @@ namespace VapeForLife.Services
     {
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public HTML_Prebuilds.SmallHtmlPreBuild CheckIfUserAlloewdAccess(string user)
+        public HTML_Prebuilds.ContentFileManager CheckIfUserAlloewdAccess(string user)
         {
             return UserManagement.UserManagement.CheckIfUserAlloewdAccess(user);
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public HTML_Prebuilds.SmallHtmlPreBuild SignUp()
+        public HTML_Prebuilds.ContentFileManager SignUp()
         {
-            HTML_Prebuilds.SmallHtmlPreBuild outPut = new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/usermanagement/signup.html", "reloadcontent/usermanagement/register.js");
+            HTML_Prebuilds.ContentFileManager outPut = new HTML_Prebuilds.ContentFileManager("SignUp");
             return outPut;
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public HTML_Prebuilds.SmallHtmlPreBuild Register(string nickname)
+        public HTML_Prebuilds.ContentFileManager Register(string nickname)
         {
             return UserManagement.UserManagement.Register(nickname);
         }
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public HTML_Prebuilds.SmallHtmlPreBuild Validate(string user)
+        public HTML_Prebuilds.ContentFileManager Validate(string user)
         {
             return UserManagement.UserManagement.Validate(user);
         }

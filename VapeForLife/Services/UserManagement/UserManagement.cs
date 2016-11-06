@@ -41,12 +41,12 @@ namespace VapeForLife.Services.UserManagement
         /// </summary>
         /// <param name="user">Der zu prüfende JSON-String</param>
         /// <returns>Neuer Content der angezeigt werden darf</returns>
-        public static SmallHtmlPreBuild CheckIfUserAlloewdAccess(string user)
+        public static ContentFileManager CheckIfUserAlloewdAccess(string user)
         {
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(user);
 
-            SmallHtmlPreBuild outPut = null;
+            ContentFileManager outPut = null;
 
             if (!string.IsNullOrEmpty(userObject.Password))
             {
@@ -60,15 +60,13 @@ namespace VapeForLife.Services.UserManagement
                         if (entities.users.AsNoTracking().FirstOrDefault(e => e.Email.Equals(userObject.Email))?.Password?.Equals(hash) == true)
                         {
                             outPut =
-                              new HTML_Prebuilds.SmallHtmlPreBuild("reloadcontent/afterlogin/ReloadedAfterLogin.html",
-                              "reloadcontent/afterlogin/ReloadedAfterLogin.js",
-                              "reloadcontent/afterlogin/ReloadedAfterLogin.css");
+                              new HTML_Prebuilds.ContentFileManager("CheckIfUserAlloewdAccess");
 
                             outPut.AlloewdToReload = true;
                         }
                         else
                         {
-                            outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
+                            outPut = new HTML_Prebuilds.ContentFileManager();
                             outPut.AlloewdToReload = false;
                         }
                     }
@@ -86,25 +84,25 @@ namespace VapeForLife.Services.UserManagement
                     //    u.Email = "admin@admin.admin";
                     //    entities.users.Add(u);
                     //    entities.SaveChanges();
-                    //    outPut = new HTML_Prebuilds.SmallHtmlPreBuild();
+                    //    outPut = new HTML_Prebuilds.ContentFileManager();
                     //    outPut.HTML = "NOPE";
                     //}
                 }
             }
             else
             {
-                outPut = new SmallHtmlPreBuild();
+                outPut = new ContentFileManager();
                 outPut.AlloewdToReload = false;
             }
 
             return outPut;
         }
 
-        public static SmallHtmlPreBuild Validate(string user)
+        public static ContentFileManager Validate(string user)
         {
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(user);
-            SmallHtmlPreBuild outPut = new SmallHtmlPreBuild();
+            ContentFileManager outPut = new ContentFileManager();
 
 
 
@@ -116,11 +114,11 @@ namespace VapeForLife.Services.UserManagement
         /// </summary>
         /// <param name="user">Der zu prüfende JSON-String</param>
         /// <returns>Neuer Content der angezeigt werden darf</returns>
-        public static SmallHtmlPreBuild Register(string nickname)
+        public static ContentFileManager Register(string nickname)
         {
             var serializer = new JavaScriptSerializer(); //stop point set here
             DataClasses.User userObject = serializer.Deserialize<DataClasses.User>(nickname);
-            SmallHtmlPreBuild outPut = new SmallHtmlPreBuild();
+            ContentFileManager outPut = new ContentFileManager();
 
             //TODO: Prüfen ob der Benutzer valide Werte eingegeben hat. Dies muss auf mehreren Seiten geschehen.
             //TODO: Prüfen im Content ob Valide eingaben getätigt wurden
@@ -143,9 +141,7 @@ namespace VapeForLife.Services.UserManagement
 
                     entities.users.Add(u);
                     entities.SaveChanges();
-                    outPut = new SmallHtmlPreBuild();
-                    outPut.HTML.Add("reloadcontent/usermanagement/loginafterregistration.html");
-                    outPut.JS.Add("js/usermanagement/loginafterregistration.js");
+                    outPut = new ContentFileManager("Register");
                     SendMail(userObject);
                 }
             }

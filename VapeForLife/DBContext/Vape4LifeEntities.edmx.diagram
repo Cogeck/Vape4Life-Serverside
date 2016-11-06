@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4ef828915f034323951f129759e6b200" Name="Diagram1">
+      <Diagram DiagramId="4ef828915f034323951f129759e6b200" Name="Diagram1" ZoomLevel="93">
         <EntityTypeShape EntityType="Vape4Life.aroma" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Vape4Life.aroma_languages_relation" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Vape4Life.base" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
@@ -18,6 +18,10 @@
         <EntityTypeShape EntityType="Vape4Life.nicotine" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Vape4Life.units" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Vape4Life.user" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Vape4Life.ReloadebleContentCSS" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Vape4Life.ReloadebleContentHTML" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Vape4Life.ReloadebleContentJ" Width="1.5" PointX="7.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Vape4Life.ServerScriptMethod" Width="1.5" PointX="9.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
