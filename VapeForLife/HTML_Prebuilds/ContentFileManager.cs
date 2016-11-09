@@ -53,8 +53,8 @@ namespace VapeForLife.HTML_Prebuilds
                 else
                 {
                     entities.ReloadebleContentHTMLs.AsNoTracking().Where(r => r.IdfServerScriptMethod == serverScriptMethod.IdServerScriptMethod).ToList().ForEach(r => this.HTML.Add(r.FilePath));
-                    entities.ReloadebleContentJS.AsNoTracking().Where(r => r.IdfServerScriptMethod == serverScriptMethod.IdServerScriptMethod).ToList().ForEach(r => this.HTML.Add(r.FilePath));
-                    entities.ReloadebleContentCSSes.AsNoTracking().Where(r => r.IdfServerScriptMethod == serverScriptMethod.IdServerScriptMethod).ToList().ForEach(r => this.HTML.Add(r.FilePath));
+                    entities.ReloadebleContentJS.AsNoTracking().Where(r => r.IdfServerScriptMethod == serverScriptMethod.IdServerScriptMethod).ToList().ForEach(r => this.JS.Add(r.FilePath));
+                    entities.ReloadebleContentCSSes.AsNoTracking().Where(r => r.IdfServerScriptMethod == serverScriptMethod.IdServerScriptMethod).ToList().ForEach(r => this.CSS.Add(r.FilePath));
                 }
             }
         }        
